@@ -1,13 +1,10 @@
 # BurnScarISP
-Repository for ACENET ISP. Using machine learning to map the area of burn scars in Labrador.
+Repository for ACENET ISP. Using machine learning to map the area of burn scars. The study area chosen is located in southern Labrador/Quebec. The study area was chosen based on a wildfire that occurred in 2023 at 58.9336521°W 52.0869104°N.
 
-The wildfire season broke a number of records in 2023 across Canada. This project looks to map the extent of wild fire damage, or burn scars, in Labrador. Three study areas were chosen based on a 2023 fire perimeter map (source: Canadian Wildland Fire Information System). Based on the data, there were 8 wildfires in Labrador between June and July. The three with the most damage done were chosen for analysis.
+This project takes satellite data from the multi-spectral satellite Sentinel-2. By using our knowledge of the spectral reflectance of healthy vegetation and burnt areas, we can create a Normalized Burn Ratio (NBR) using near infrared and shortwave infrared bands. We can then perform machine learning on this NBR raster to classify which pixels are burnt and which are untouched.
 
-Imagery from the Sentinel-2 satellite was chosen for analysis. Sentinel-2 is a multispectral satellite with a spatial resolution ranging from 10 - 60 m, based on the spectral band. As healthy vegetation strongly reflects near infrared light, we're interested in near infrared bands like B8a. Satellite imagery of the study area from before and after the wildfire was collected. The bands in our data analysis will have a spatial resolution of 20 m. Data was downloaded from the Copernicus Data Space Ecosystem.
+This code performs 4 different classifications. The 4 classifications are unsupervised, Support Vector Machines (C-Support Vector), Random Forest, and Decision Trees. The code also creates a natural colour composite and a false colour composite of the study area.
 
-Different classification methods (supervised vs. unsupervised) and algorithms (random tree, support vector machines, etc.) will be tested and compared to see which gives the most accurate results. 
+The bands chosen for this analysis include the blue, green, and red bands, along with a near infrared band and a shortwave infrared band. A scene classification band was also used. The bands have a spatial resolution of 20m.
 
-Location of wildfires:
-Zone A - 58.9336521°W 52.0869104°N 
-Zone B - 64.3448608°W 53.1020780°N 
-Zone C - 62.0132970°W 56.9871025°N 
+The study area was chosen based on data from the Canadian Wildland Fire Information System website. Historic data from this website was also used to help create training data for the supervised classifications.

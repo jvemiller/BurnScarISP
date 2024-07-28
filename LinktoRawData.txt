@@ -1,5 +1,0 @@
-Satellite data is too large to host on Github. Even with the Git Large File Storage, the total raw data is over 5GB. Link to a google drive with a zip of the raw data below.
-
-Raster data contains three Zones, each with two sets of data collected (before and after wildfires). Satellite data comes from Sentinel-2. Raw data contains the bands as .jp2 files.
-
-https://drive.google.com/file/d/14_57TWx8MKnvhDqfMLwOCWBUaou3evF8/view?usp=sharing
